@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:proyeto_moviles/home_page.dart';
+import 'package:proyeto_moviles/login_page.dart';
 
 void main() => runApp(const MyApp());
 
@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Material App',
-      home: HomePage(),
+      home: LoginPage(),
     );
   }
 }
