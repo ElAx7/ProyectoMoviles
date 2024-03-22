@@ -8,5 +8,5 @@ El desarrollo de la aplicación "Tapatío Task" se basará en un conjunto de tec
 	Flutter
 	Firebase
 	(Conforme avance el proyecto se agregarán más)
-![image](https://github.com/ElAx7/ProyectoMoviles/assets/125324367/5af164d4-1fd6-4aaf-b5fe-8a4d3fdec682)
+
 
