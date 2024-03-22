@@ -1,15 +1,44 @@
-# ProyectoMoviles
+# Tapatío task
 
-Introduccion: 
-Este proyecto surge de la creciente demanda de herramientas digitales que simplifiquen la vida diaria de los habitantes de Guadalajara, una ciudad dinámica y vibrante que requiere soluciones innovadoras para enfrentar los desafíos de la vida moderna. "Tapatío Task" no solo aspira a ser una aplicación de gestión de tareas convencional, sino también a convertirse en un compañero confiable y útil para todos aquellos que buscan optimizar su tiempo y mejorar su organización personal.
+Tapatío task es la nueva manera de bla bla bla...
 
-Tecnologías utilizadas
-El desarrollo de la aplicación "Tapatío Task" se basará en un conjunto de tecnologías y herramientas modernas que permitirán la implementación eficiente de sus funcionalidades principales. A continuación, se detallan las tecnologías seleccionadas hasta el momento:
+## Información del proyecto
 
-- Flutter
+### Dependencias
 
-- Firebase
+|Dependencia|Version|Tipo|
+|Bloc|1.4.5|Extensión VSCode|
+|Flutter|2.2.3|Framework|
+|Provider|5.0.0|Extensión VSCode|
+|Dart|2.13.4|Lenguaje|
 
-- (Conforme avance el proyecto se agregarán más)
+### Estructura del proyecto
 
+```
+lib
+│   main.dart
 
+```
+
+### Estructura de la base de datos
+
+```
+database
+│   database.db
+
+```
+
+### Estructura de la API
+
+```
+api
+│   api.dart
+
+```
+
+### Como correr el proyecto
+
+1. Clonar el proyecto
+2. Abrir el proyecto en VSCode
+3. Preparar el dispositivo o emulador
+4. Correr el proyecto en el dispositivo o emulador
