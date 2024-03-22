@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:proyeto_moviles/home_page.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -34,6 +35,8 @@ class _LoginScreenState extends State<LoginScreen> {
             style: TextStyle(
               fontSize: 36,
               fontWeight: FontWeight.bold,
+              color: Colors.black,
+              // Color personalizado
             ),
           ),
           SizedBox(height: 16),
@@ -41,6 +44,9 @@ class _LoginScreenState extends State<LoginScreen> {
             controller: _emailController,
             decoration: InputDecoration(
               labelText: "Correo",
+              labelStyle: TextStyle(
+                color: Colors.black, // Color personalizado
+              ),
             ),
             onChanged: (value) {
               setState(() {
@@ -53,6 +59,9 @@ class _LoginScreenState extends State<LoginScreen> {
             controller: _passwordController,
             decoration: InputDecoration(
               labelText: "Contraseña",
+              labelStyle: TextStyle(
+                color: Colors.black, // Color personalizado
+              ),
             ),
             onChanged: (value) {
               setState(() {
@@ -72,7 +81,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   });
                 },
               ),
-              Text("Recuérdame"),
+              Text(
+                "Recuérdame", // Color personalizado
+                textAlign: TextAlign.center,
+              ),
             ],
           ),
           SizedBox(height: 16),
@@ -80,8 +92,40 @@ class _LoginScreenState extends State<LoginScreen> {
             onPressed: () {
               // Aquí podrías implementar la lógica de inicio de sesión
               // utilizando los valores de _email, _password y _rememberMe
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => HomePage()),
+              );
             },
-            child: Text("Iniciar Sesión"),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Color(0xFF8CCAB4), // Color personalizado
+              minimumSize: Size(300, 50),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
+            child: Text(
+              "Entrar>",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+          ),
+          SizedBox(height: 16),
+          TextButton(
+            onPressed: () {
+              // Aquí podrías implementar la navegación a la página de registro
+            },
+            child: Text(
+              "¿Eres nuevo? Regístrate ahora",
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+                color: Colors.black, // Color personalizado
+              ),
+            ),
           ),
         ],
       ),
