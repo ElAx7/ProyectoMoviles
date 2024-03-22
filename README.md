@@ -5,8 +5,11 @@ Este proyecto surge de la creciente demanda de herramientas digitales que simpli
 
 Tecnologías utilizadas
 El desarrollo de la aplicación "Tapatío Task" se basará en un conjunto de tecnologías y herramientas modernas que permitirán la implementación eficiente de sus funcionalidades principales. A continuación, se detallan las tecnologías seleccionadas hasta el momento:
-	Flutter
-	Firebase
-	(Conforme avance el proyecto se agregarán más)
+
+- Flutter
+
+- Firebase
+
+- (Conforme avance el proyecto se agregarán más)
 
 
