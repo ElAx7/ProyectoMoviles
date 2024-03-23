@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:proyeto_moviles/login_page.dart';
+import 'package:proyeto_moviles/screens/auth/login_page.dart';
 
 void main() => runApp(const MyApp());
 
