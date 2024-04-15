@@ -1,0 +1,12 @@
+com.example.proyeto_moviles.app-jetified-window-java-1.0.0-beta04-0 C:\Users\sulli\.gradle\caches\transforms-3\055ae8559571776bcea277f241e66394\transformed\jetified-window-java-1.0.0-beta04\res
+com.example.proyeto_moviles.app-core-1.6.0-1 C:\Users\sulli\.gradle\caches\transforms-3\2f534bd40cdd7b508bd1b5b84b95cfbc\transformed\core-1.6.0\res
+com.example.proyeto_moviles.app-jetified-annotation-experimental-1.1.0-2 C:\Users\sulli\.gradle\caches\transforms-3\350e2e88ef8140730621b70b8a681767\transformed\jetified-annotation-experimental-1.1.0\res
+com.example.proyeto_moviles.app-jetified-window-1.0.0-beta04-3 C:\Users\sulli\.gradle\caches\transforms-3\c76b7be8615e4a9ae32c8fdcff4b4064\transformed\jetified-window-1.0.0-beta04\res
+com.example.proyeto_moviles.app-debug-4 C:\Users\sulli\Documents\Proyectos flutter\ProyectoMoviles\android\app\src\debug\res
+com.example.proyeto_moviles.app-main-5 C:\Users\sulli\Documents\Proyectos flutter\ProyectoMoviles\android\app\src\main\res
+com.example.proyeto_moviles.app-pngs-6 C:\Users\sulli\Documents\Proyectos flutter\ProyectoMoviles\build\app\generated\res\pngs\debug
+com.example.proyeto_moviles.app-resValues-7 C:\Users\sulli\Documents\Proyectos flutter\ProyectoMoviles\build\app\generated\res\resValues\debug
+com.example.proyeto_moviles.app-rs-8 C:\Users\sulli\Documents\Proyectos flutter\ProyectoMoviles\build\app\generated\res\rs\debug
+com.example.proyeto_moviles.app-mergeDebugResources-9 C:\Users\sulli\Documents\Proyectos flutter\ProyectoMoviles\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.example.proyeto_moviles.app-mergeDebugResources-10 C:\Users\sulli\Documents\Proyectos flutter\ProyectoMoviles\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.example.proyeto_moviles.app-merged_res-11 C:\Users\sulli\Documents\Proyectos flutter\ProyectoMoviles\build\app\intermediates\merged_res\debug
