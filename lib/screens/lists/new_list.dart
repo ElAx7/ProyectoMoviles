@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:proyeto_moviles/next.dart';
+import 'package:proyeto_moviles/screens/lists/next.dart';
 
 class new_list extends StatelessWidget {
   @override
@@ -46,7 +46,6 @@ class new_list extends StatelessWidget {
                 );
               },
               style: ElevatedButton.styleFrom(
-                primary: Colors.green,
                 padding: EdgeInsets.symmetric(vertical: 15.0),
               ),
               child: Text(
