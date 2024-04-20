@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:proyeto_moviles/screens/auth/login_page.dart';
 
-import '../../utils/custom_textfield.dart';
-
 class SignupPage extends StatelessWidget {
   const SignupPage({Key? key}) : super(key: key);
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +17,13 @@ class SignupPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextField(
-                decoration: customInputDecoration(labelText: 'Nombre', prefixIcon: Icons.person)
+                decoration: InputDecoration(
+                  labelText: 'Nombre',
+                  labelStyle: TextStyle(
+                    color: Colors.black,
+                  ),
+                  prefixIcon: Icon(Icons.person), // Icono de persona
+                ),
               ),
               TextField(
                 decoration: InputDecoration(
@@ -27,6 +31,7 @@ class SignupPage extends StatelessWidget {
                   labelStyle: TextStyle(
                     color: Colors.black,
                   ),
+                  prefixIcon: Icon(Icons.email), // Icono de correo
                 ),
               ),
               TextField(
@@ -35,6 +40,7 @@ class SignupPage extends StatelessWidget {
                   labelStyle: TextStyle(
                     color: Colors.black,
                   ),
+                  prefixIcon: Icon(Icons.lock), // Icono de candado
                 ),
               ),
               TextField(
@@ -43,10 +49,12 @@ class SignupPage extends StatelessWidget {
                   labelStyle: TextStyle(
                     color: Colors.black,
                   ),
+                  prefixIcon:
+                      Icon(Icons.lock_outline), // Icono de candado vacío
                 ),
               ),
               ElevatedButton(
-                onPressed: () {                  
+                onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -54,7 +62,13 @@ class SignupPage extends StatelessWidget {
                     ),
                   );
                 },
-                child: Text('Sign Up'),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Color(0xFF8CCAB4),
+                ),
+                child: Text('Sign Up',
+                    style: TextStyle(
+                      color: Colors.white,
+                    )),
               ),
             ],
           ),

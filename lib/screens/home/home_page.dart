@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:proyeto_moviles/screens/lists/calendario_screen.dart';
+import 'package:proyeto_moviles/screens/lists/my_account.dart';
 import 'package:proyeto_moviles/screens/lists/new_list.dart';
 import 'package:proyeto_moviles/screens/lists/my_day.dart';
 import 'package:proyeto_moviles/screens/lists/my_list.dart';
@@ -43,6 +44,20 @@ class HomePage extends StatelessWidget {
                           fontSize: 24,
                         ),
                       ),
+                    ),
+                    ListTile(
+                      leading:
+                          Icon(Icons.account_circle_sharp, color: Colors.black),
+                      title: Text('Mi cuenta',
+                          style: TextStyle(color: Colors.black)),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => my_account(),
+                          ),
+                        );
+                      },
                     ),
                     ListTile(
                       leading:
