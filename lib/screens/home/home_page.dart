@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:proyeto_moviles/screens/lists/calendario_screen.dart';
+import 'package:proyeto_moviles/screens/lists/new_list.dart';
+import 'package:proyeto_moviles/screens/lists/my_day.dart';
+import 'package:proyeto_moviles/screens/lists/my_list.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -17,11 +21,11 @@ class HomePage extends StatelessWidget {
           },
         ),
         title: Text('Hola {NombreUsuario}'),
-        backgroundColor: Colors.white, // Fondo blanco en el AppBar
+        backgroundColor: Colors.white,
       ),
       drawer: Drawer(
         child: Container(
-          color: Color(0xFF8CCAB4), // Fondo del Drawer con el color deseado
+          color: Color(0xFF8CCAB4),
           child: Column(
             children: [
               Expanded(
@@ -41,18 +45,17 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                     ListTile(
-                      leading: Icon(Icons.home, color: Colors.black),
-                      title:
-                          Text('Inicio', style: TextStyle(color: Colors.black)),
-                      onTap: () {
-                      },
-                    ),
-                    ListTile(
                       leading:
                           Icon(Icons.view_column_sharp, color: Colors.black),
                       title:
                           Text('Mi dia', style: TextStyle(color: Colors.black)),
                       onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => my_day(),
+                          ),
+                        );
                       },
                     ),
                     ListTile(
@@ -60,6 +63,12 @@ class HomePage extends StatelessWidget {
                       title: Text('Nueva lista',
                           style: TextStyle(color: Colors.black)),
                       onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => new_list(),
+                          ),
+                        );
                       },
                     ),
                     ListTile(
@@ -67,6 +76,12 @@ class HomePage extends StatelessWidget {
                       title: Text('Calendario',
                           style: TextStyle(color: Colors.black)),
                       onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => calendario_screen(),
+                          ),
+                        );
                       },
                     ),
                     ListTile(
@@ -74,6 +89,12 @@ class HomePage extends StatelessWidget {
                       title: Text('Mi lista 1',
                           style: TextStyle(color: Colors.black)),
                       onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => my_list(),
+                          ),
+                        );
                       },
                     ),
                   ],

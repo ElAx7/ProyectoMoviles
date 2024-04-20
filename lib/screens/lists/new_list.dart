@@ -8,7 +8,7 @@ class new_list extends StatelessWidget {
       appBar: AppBar(
         title: Center(child: Text('Nueva Lista')),
         leading: IconButton(
-          icon: Icon(Icons.close),
+          icon: Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.pop(context); // Cierra la pantalla actual
           },

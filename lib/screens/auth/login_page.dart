@@ -106,7 +106,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             child: Text(
-              "Entrar>",
+              "Entrar >",
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
