@@ -46,11 +46,11 @@ class new_list extends StatelessWidget {
                 );
               },
               style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.symmetric(vertical: 15.0),
+                backgroundColor: Color(0xFF8CCAB4),
               ),
               child: Text(
                 'Crear >',
-                style: TextStyle(fontSize: 18.0),
+                style: TextStyle(fontSize: 18.0, color: Colors.white),
               ),
             ),
           ],

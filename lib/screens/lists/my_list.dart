@@ -8,7 +8,7 @@ class my_list extends StatefulWidget {
 
 class _MyListState extends State<my_list> {
   List<bool> taskStates = [false, false, false, false];
-  List<String> tasks = ['Tarea 1', 'Tarea 2', 'Tarea 3', 'Tarea 4'];
+  List<String> tasks = ['Lista 1', 'Lista 2', 'Lista 3', 'Lista 4'];
   final TextEditingController _newTaskController = TextEditingController();
 
   @override
@@ -68,24 +68,25 @@ class _MyListState extends State<my_list> {
                   builder: (BuildContext context) {
                     return AlertDialog(
                       title: Text(
-                        'Agregar Tarea',
+                        'Agregar Nombre de Lista',
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white,
+                          color: Colors.black,
                         ),
                       ),
                       content: TextField(
                         controller: _newTaskController,
                         decoration: InputDecoration(
-                            hintText: 'Ingresa una nueva tarea'),
+                            hintText: 'Ingresa una nueva Lista'),
                       ),
                       actions: [
                         TextButton(
                           onPressed: () {
                             Navigator.of(context).pop();
                           },
-                          child: Text('Cancelar'),
+                          child: Text('Cancelar',
+                              style: TextStyle(color: Colors.black)),
                         ),
                         ElevatedButton(
                           onPressed: () {
@@ -113,7 +114,7 @@ class _MyListState extends State<my_list> {
                 backgroundColor: Color(0xFF8CCAB4),
               ),
               child: Text(
-                'Agregar Tarea >',
+                'Agregar Lista >',
                 style: TextStyle(color: Colors.white),
               ),
             ),
