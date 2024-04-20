@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:proyeto_moviles/screens/auth/signup_page.dart';
 import 'package:proyeto_moviles/screens/home/home_page.dart';
+import 'package:proyeto_moviles/screens/home/loading.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -95,7 +96,7 @@ class _LoginScreenState extends State<LoginScreen> {
               // utilizando los valores de _email, _password y _rememberMe
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => HomePage()),
+                MaterialPageRoute(builder: (context) => loadingScreen()),
               );
             },
             style: ElevatedButton.styleFrom(
