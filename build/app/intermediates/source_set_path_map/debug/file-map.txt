@@ -1,12 +1,26 @@
-com.example.proyeto_moviles.app-jetified-window-java-1.0.0-beta04-0 C:\Users\sulli\.gradle\caches\transforms-3\055ae8559571776bcea277f241e66394\transformed\jetified-window-java-1.0.0-beta04\res
-com.example.proyeto_moviles.app-core-1.6.0-1 C:\Users\sulli\.gradle\caches\transforms-3\2f534bd40cdd7b508bd1b5b84b95cfbc\transformed\core-1.6.0\res
-com.example.proyeto_moviles.app-jetified-annotation-experimental-1.1.0-2 C:\Users\sulli\.gradle\caches\transforms-3\350e2e88ef8140730621b70b8a681767\transformed\jetified-annotation-experimental-1.1.0\res
-com.example.proyeto_moviles.app-jetified-window-1.0.0-beta04-3 C:\Users\sulli\.gradle\caches\transforms-3\c76b7be8615e4a9ae32c8fdcff4b4064\transformed\jetified-window-1.0.0-beta04\res
-com.example.proyeto_moviles.app-debug-4 C:\Users\sulli\Documents\Proyectos flutter\ProyectoMoviles\android\app\src\debug\res
-com.example.proyeto_moviles.app-main-5 C:\Users\sulli\Documents\Proyectos flutter\ProyectoMoviles\android\app\src\main\res
-com.example.proyeto_moviles.app-pngs-6 C:\Users\sulli\Documents\Proyectos flutter\ProyectoMoviles\build\app\generated\res\pngs\debug
-com.example.proyeto_moviles.app-resValues-7 C:\Users\sulli\Documents\Proyectos flutter\ProyectoMoviles\build\app\generated\res\resValues\debug
-com.example.proyeto_moviles.app-rs-8 C:\Users\sulli\Documents\Proyectos flutter\ProyectoMoviles\build\app\generated\res\rs\debug
-com.example.proyeto_moviles.app-mergeDebugResources-9 C:\Users\sulli\Documents\Proyectos flutter\ProyectoMoviles\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
-com.example.proyeto_moviles.app-mergeDebugResources-10 C:\Users\sulli\Documents\Proyectos flutter\ProyectoMoviles\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
-com.example.proyeto_moviles.app-merged_res-11 C:\Users\sulli\Documents\Proyectos flutter\ProyectoMoviles\build\app\intermediates\merged_res\debug
+com.example.proyeto_moviles.app-jetified-annotation-experimental-1.1.0-0 C:\Users\sulli\.gradle\caches\transforms-3\04e598eda8c2c03b0c4b25a83a238909\transformed\jetified-annotation-experimental-1.1.0\res
+com.example.proyeto_moviles.app-jetified-savedstate-1.2.0-1 C:\Users\sulli\.gradle\caches\transforms-3\0c3df4e3bbedaabf76e30466019edccc\transformed\jetified-savedstate-1.2.0\res
+com.example.proyeto_moviles.app-jetified-lifecycle-viewmodel-savedstate-2.5.1-2 C:\Users\sulli\.gradle\caches\transforms-3\160c39d67c1d0140badba7ae86b9a70e\transformed\jetified-lifecycle-viewmodel-savedstate-2.5.1\res
+com.example.proyeto_moviles.app-lifecycle-viewmodel-2.5.1-3 C:\Users\sulli\.gradle\caches\transforms-3\1a6146155b4acdf37e3b4968af3f3b71\transformed\lifecycle-viewmodel-2.5.1\res
+com.example.proyeto_moviles.app-jetified-activity-1.5.1-4 C:\Users\sulli\.gradle\caches\transforms-3\3aa06a0c37c550cd118a2a79922e7ecb\transformed\jetified-activity-1.5.1\res
+com.example.proyeto_moviles.app-jetified-firebase-common-20.4.3-5 C:\Users\sulli\.gradle\caches\transforms-3\517d9286808e875f580fc75046895b92\transformed\jetified-firebase-common-20.4.3\res
+com.example.proyeto_moviles.app-jetified-play-services-auth-21.0.0-6 C:\Users\sulli\.gradle\caches\transforms-3\6ff49d72ccd767e4a3fab4ebb0e2343c\transformed\jetified-play-services-auth-21.0.0\res
+com.example.proyeto_moviles.app-core-1.8.0-7 C:\Users\sulli\.gradle\caches\transforms-3\826c1c945688d0929b8bbbca13027ed9\transformed\core-1.8.0\res
+com.example.proyeto_moviles.app-jetified-window-java-1.0.0-beta04-8 C:\Users\sulli\.gradle\caches\transforms-3\9bf6a2c568709bb5a14eb0cdd9623cc7\transformed\jetified-window-java-1.0.0-beta04\res
+com.example.proyeto_moviles.app-lifecycle-livedata-core-2.5.1-9 C:\Users\sulli\.gradle\caches\transforms-3\b448e4fd16c65917e5717add7c339128\transformed\lifecycle-livedata-core-2.5.1\res
+com.example.proyeto_moviles.app-jetified-window-1.0.0-beta04-10 C:\Users\sulli\.gradle\caches\transforms-3\c52513ed36cde2693c7820cba78cdba4\transformed\jetified-window-1.0.0-beta04\res
+com.example.proyeto_moviles.app-jetified-play-services-basement-18.3.0-11 C:\Users\sulli\.gradle\caches\transforms-3\c80e8e7fbf22c2eb2d6c45ed132519d1\transformed\jetified-play-services-basement-18.3.0\res
+com.example.proyeto_moviles.app-lifecycle-runtime-2.5.1-12 C:\Users\sulli\.gradle\caches\transforms-3\d890c82f76760fa2b34bdafdde270216\transformed\lifecycle-runtime-2.5.1\res
+com.example.proyeto_moviles.app-jetified-play-services-base-18.0.1-13 C:\Users\sulli\.gradle\caches\transforms-3\dd40382a12410f99cdd3d2d415be20e8\transformed\jetified-play-services-base-18.0.1\res
+com.example.proyeto_moviles.app-fragment-1.5.7-14 C:\Users\sulli\.gradle\caches\transforms-3\fc40e38f2d33428357d83cb556bfa608\transformed\fragment-1.5.7\res
+com.example.proyeto_moviles.app-debug-15 C:\Users\sulli\Documents\Proyectos flutter\ProyectoMoviles\android\app\src\debug\res
+com.example.proyeto_moviles.app-main-16 C:\Users\sulli\Documents\Proyectos flutter\ProyectoMoviles\android\app\src\main\res
+com.example.proyeto_moviles.app-google-services-17 C:\Users\sulli\Documents\Proyectos flutter\ProyectoMoviles\build\app\generated\res\google-services\debug
+com.example.proyeto_moviles.app-pngs-18 C:\Users\sulli\Documents\Proyectos flutter\ProyectoMoviles\build\app\generated\res\pngs\debug
+com.example.proyeto_moviles.app-resValues-19 C:\Users\sulli\Documents\Proyectos flutter\ProyectoMoviles\build\app\generated\res\resValues\debug
+com.example.proyeto_moviles.app-rs-20 C:\Users\sulli\Documents\Proyectos flutter\ProyectoMoviles\build\app\generated\res\rs\debug
+com.example.proyeto_moviles.app-mergeDebugResources-21 C:\Users\sulli\Documents\Proyectos flutter\ProyectoMoviles\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.example.proyeto_moviles.app-mergeDebugResources-22 C:\Users\sulli\Documents\Proyectos flutter\ProyectoMoviles\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.example.proyeto_moviles.app-merged_res-23 C:\Users\sulli\Documents\Proyectos flutter\ProyectoMoviles\build\app\intermediates\merged_res\debug
+com.example.proyeto_moviles.app-packaged_res-24 C:\Users\sulli\Documents\Proyectos flutter\ProyectoMoviles\build\firebase_core\intermediates\packaged_res\debug
+com.example.proyeto_moviles.app-packaged_res-25 C:\Users\sulli\Documents\Proyectos flutter\ProyectoMoviles\build\google_sign_in_android\intermediates\packaged_res\debug

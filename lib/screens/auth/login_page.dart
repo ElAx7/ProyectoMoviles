@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:proyeto_moviles/screens/auth/signup_page.dart';
-import 'package:proyeto_moviles/screens/home/home_page.dart';
 import 'package:proyeto_moviles/screens/home/loading.dart';
 
 class LoginPage extends StatelessWidget {

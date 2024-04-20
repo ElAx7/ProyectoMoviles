@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "637355191221",
+    "project_id": "tapatiotask",
+    "storage_bucket": "tapatiotask.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:637355191221:android:61d72bbbebfd6328d9c7fc",
+        "android_client_info": {
+          "package_name": "com.example.proyeto_moviles"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHVn7DlgbjPhLR_-4dINmV2Qyyd63EKQ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

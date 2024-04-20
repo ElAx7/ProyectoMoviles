@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:proyeto_moviles/screens/lists/next.dart';
 
 class my_list extends StatefulWidget {
   @override

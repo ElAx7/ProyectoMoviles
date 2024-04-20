@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-// Remove the unused import directive
-//import 'package:proyeto_moviles/main.dart';
+import 'package:table_calendar/table_calendar.dart';
 
 class calendario_screen extends StatefulWidget {
   @override
@@ -8,13 +7,8 @@ class calendario_screen extends StatefulWidget {
 }
 
 class calendario_state extends State<calendario_screen> {
-  DateTime _selectedDay =
-      DateTime.now(); // Inicialmente seleccionado el día de hoy
-
-  @override
-  void initState() {
-    super.initState();
-  }
+  DateTime _selectedDay = DateTime.now();
+  CalendarFormat _calendarFormat = CalendarFormat.month;
 
   @override
   Widget build(BuildContext context) {
@@ -23,29 +17,28 @@ class calendario_state extends State<calendario_screen> {
         title: Text('Calendario'),
       ),
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center, // Cambio aquí
         children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center, // Cambio aquí
-              children: <Widget>[
-                Text(
-                  'Ve los días límites de entrega de tus tareas',
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                SizedBox(height: 8),
-                Text(
-                  'Selecciona un día para ver los eventos:',
-                  style: TextStyle(
-                    fontSize: 16,
-                  ),
-                ),
-              ],
-            ),
+          TableCalendar(
+            firstDay: DateTime.utc(2010, 10, 16),
+            lastDay: DateTime.utc(2030, 3, 14),
+            focusedDay: _selectedDay,
+            calendarFormat: _calendarFormat,
+            selectedDayPredicate: (day) {
+              return isSameDay(_selectedDay, day);
+            },
+            onDaySelected: (selectedDay, focusedDay) {
+              setState(() {
+                _selectedDay = selectedDay;
+                // Actualiza el estado para cambiar las vistas según el día seleccionado
+              });
+            },
+            onFormatChanged: (format) {
+              if (_calendarFormat != format) {
+                setState(() {
+                  _calendarFormat = format;
+                });
+              }
+            },
           ),
           Expanded(
             child: Padding(
