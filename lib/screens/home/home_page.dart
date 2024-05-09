@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:proyeto_moviles/bloc/user_auth_repository.dart';
 import 'package:proyeto_moviles/screens/lists/calendario_screen.dart';
 import 'package:proyeto_moviles/screens/lists/my_account.dart';
 import 'package:proyeto_moviles/screens/lists/new_list.dart';
@@ -6,6 +7,8 @@ import 'package:proyeto_moviles/screens/lists/my_day.dart';
 import 'package:proyeto_moviles/screens/lists/my_list.dart';
 
 class HomePage extends StatelessWidget {
+  final UserAuthRepository _authRepository = UserAuthRepository();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +24,16 @@ class HomePage extends StatelessWidget {
             );
           },
         ),
-        title: Text('Hola {NombreUsuario}'),
+        title: StreamBuilder<String>(
+          stream: _authRepository.getUserName(false),
+          builder: (context, snapshot) {
+            if(snapshot.hasData) {
+              return Text('Bienvenido ${snapshot.data}');
+            } else {
+              return Text('Bienvenido');
+            }	
+          },
+        ),
         backgroundColor: Colors.white,
       ),
       drawer: Drawer(
@@ -119,25 +131,44 @@ class HomePage extends StatelessWidget {
                 padding: const EdgeInsets.all(16.0),
                 child: Row(
                   children: [
-                    CircleAvatar(
-                      child: Icon(Icons.person),
+                    StreamBuilder<String>(
+                      stream: _authRepository.getUserImage(),
+                      builder: (context, snapshot) {
+                        if(snapshot.hasData) {
+                          return CircleAvatar(
+                            backgroundImage: NetworkImage(snapshot.data!),
+                            child: Icon(Icons.person),
+                          );
+                        } else {
+                          return CircleAvatar(
+                            child: Icon(Icons.person),
+                          );
+                        }
+                      },
                     ),
                     SizedBox(width: 16.0),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          '{NombreUsuario}',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                          ),
+                        StreamBuilder<String>(
+                          stream: _authRepository.getUserName(true),
+                          builder: (context, snapshot) {
+                            if(snapshot.hasData) {
+                              return Text('${snapshot.data}');
+                            } else {
+                              return Text('Usuario google');
+                            }	
+                          },
                         ),
-                        Text(
-                          '{CorreoUsuario}@example.com',
-                          style: TextStyle(
-                            color: Colors.black,
-                          ),
+                        StreamBuilder<String>(
+                          stream: _authRepository.getUserEmail(),
+                          builder: (context, snapshot) {
+                            if(snapshot.hasData) {
+                              return Text('${snapshot.data}');
+                            } else {
+                              return Text('user@example.com');
+                            }	
+                          },
                         ),
                       ],
                     ),

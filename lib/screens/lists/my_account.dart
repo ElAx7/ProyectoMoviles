@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:proyeto_moviles/bloc/auth_bloc.dart';
+import 'package:proyeto_moviles/bloc/user_auth_repository.dart';
 import 'package:proyeto_moviles/screens/auth/login_page.dart';
 
 class my_account extends StatefulWidget {
@@ -7,6 +10,8 @@ class my_account extends StatefulWidget {
 }
 
 class account_state extends State<my_account> {
+  final UserAuthRepository _authRepository = UserAuthRepository();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,29 +32,36 @@ class account_state extends State<my_account> {
             ),
             ListTile(
               leading: Icon(Icons.person),
-              title: Text('{Nombre de Usuario}'),
-            ),
-            ListTile(
-              leading: Icon(Icons.email),
-              title: Text('{Correo Usuario}'),
-            ),
-            Divider(),
-            Text(
-              'Ajustes',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
+              title: StreamBuilder<String>(
+                stream: _authRepository.getUserName(true),
+                builder: (context, snapshot) {
+                  if (snapshot.hasData) {
+                    return Text('${snapshot.data}');
+                  } else {
+                    return Text('Nombre vacío');
+                  }
+                },
               ),
             ),
             ListTile(
-              leading: Icon(Icons.settings),
-              title: Text('Configuración de la Cuenta'),
-            ),
+              leading: Icon(Icons.email),
+              title: StreamBuilder<String>(
+                stream: _authRepository.getUserEmail(),
+                builder: (context, snapshot) {
+                  if (snapshot.hasData) {
+                    return Text('${snapshot.data}');
+                  } else {
+                    return Text('Correo vacío');
+                  }
+                },
+              ),
+            ),            
             Divider(),
             Container(
-              alignment: Alignment.center, //
+              alignment: Alignment.center,
               child: ElevatedButton(
                 onPressed: () {
+                  BlocProvider.of<AuthBloc>(context).add(SignOutEvent());
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -58,14 +70,15 @@ class account_state extends State<my_account> {
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(
-                    0xFF8CCAB4,
-                  ),
+                  backgroundColor: Color.fromARGB(255, 205, 48, 23),
                 ),
-                child: Text(
-                  'Salir de la Cuenta',
-                  style: TextStyle(
-                    color: Colors.white,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 32.0),
+                  child: Text(
+                    'Salir de la Cuenta',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:proyeto_moviles/bloc/auth_bloc.dart';
 import 'package:proyeto_moviles/screens/auth/signup_page.dart';
-import 'package:proyeto_moviles/screens/home/loading.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -17,8 +18,6 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  String _email = "";
-  String _password = "";
   bool _rememberMe = false;
 
   final _emailController = TextEditingController();
@@ -51,7 +50,6 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             onChanged: (value) {
               setState(() {
-                _email = value;
               });
             },
           ),
@@ -61,12 +59,11 @@ class _LoginScreenState extends State<LoginScreen> {
             decoration: InputDecoration(
               labelText: "Contraseña",
               labelStyle: TextStyle(
-                color: Colors.black, // Color personalizado
+                color: Colors.black,
               ),
             ),
             onChanged: (value) {
               setState(() {
-                _password = value;
               });
             },
             obscureText: true,
@@ -91,12 +88,7 @@ class _LoginScreenState extends State<LoginScreen> {
           SizedBox(height: 16),
           ElevatedButton(
             onPressed: () {
-              // Aquí podrías implementar la lógica de inicio de sesión
-              // utilizando los valores de _email, _password y _rememberMe
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => loadingScreen()),
-              );
+              BlocProvider.of<AuthBloc>(context).add(GoogleAuthEvent());
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: Color(0xFF8CCAB4), // Color personalizado
