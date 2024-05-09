@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:proyeto_moviles/bloc/auth_bloc.dart';
-import 'package:proyeto_moviles/bloc/user_auth_repository.dart';
+import 'package:proyeto_moviles/providers/bloc/auth_bloc.dart';
+import 'package:proyeto_moviles/providers/bloc/user_auth_repository.dart';
 import 'package:proyeto_moviles/screens/auth/login_page.dart';
 
 class my_account extends StatefulWidget {

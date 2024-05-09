@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:proyeto_moviles/screens/lists/next.dart';
+import 'package:proyeto_moviles/screens/lists/my_list.dart';
 
 class new_list extends StatelessWidget {
   @override
@@ -37,12 +37,12 @@ class new_list extends StatelessWidget {
               decoration: InputDecoration(labelText: 'Descripción'),
             ),
             Expanded(
-                child: Container()), // Espacio para expandir y centrar el botón
+                child: Container()),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => next()),
+                  MaterialPageRoute(builder: (context) => my_list()),
                 );
               },
               style: ElevatedButton.styleFrom(

@@ -1,13 +1,19 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_ui_firestore/firebase_ui_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:proyeto_moviles/bloc/user_auth_repository.dart';
+import 'package:flutter_expandable_fab/flutter_expandable_fab.dart';
+import 'package:proyeto_moviles/content/notes/item_note.dart';
+import 'package:proyeto_moviles/providers/bloc/user_auth_repository.dart';
 import 'package:proyeto_moviles/screens/lists/calendario_screen.dart';
 import 'package:proyeto_moviles/screens/lists/my_account.dart';
 import 'package:proyeto_moviles/screens/lists/new_list.dart';
-import 'package:proyeto_moviles/screens/lists/my_day.dart';
 import 'package:proyeto_moviles/screens/lists/my_list.dart';
+import 'package:proyeto_moviles/screens/lists/new_note.dart';
 
 class HomePage extends StatelessWidget {
   final UserAuthRepository _authRepository = UserAuthRepository();
+  final _fabKey = GlobalKey<ExpandableFabState>();  
 
   @override
   Widget build(BuildContext context) {
@@ -71,20 +77,20 @@ class HomePage extends StatelessWidget {
                         );
                       },
                     ),
-                    ListTile(
-                      leading:
-                          Icon(Icons.view_column_sharp, color: Colors.black),
-                      title:
-                          Text('Mi dia', style: TextStyle(color: Colors.black)),
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => my_day(),
-                          ),
-                        );
-                      },
-                    ),
+                    // ListTile(
+                    //   leading:
+                    //       Icon(Icons.view_column_sharp, color: Colors.black),
+                    //   title:
+                    //       Text('Mi dia', style: TextStyle(color: Colors.black)),
+                    //   onTap: () {
+                    //     Navigator.push(
+                    //       context,
+                    //       MaterialPageRoute(
+                    //         builder: (context) => my_day(),
+                    //       ),
+                    //     );
+                    //   },
+                    // ),
                     ListTile(
                       leading: Icon(Icons.list, color: Colors.black),
                       title: Text('Nueva lista',
@@ -179,35 +185,47 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-      body: Column(
+      body: FirestoreListView(
+        padding: EdgeInsets.symmetric(horizontal: 18),
+        pageSize: 15,
+        query: FirebaseFirestore.instance
+          .collection("tasks")
+          .where("userId", isEqualTo: FirebaseAuth.instance.currentUser!.uid)
+          .orderBy("createdAt", descending: false),
+        itemBuilder: (BuildContext context, QueryDocumentSnapshot<Map<String, dynamic>> document) {
+          String noteId = document.id;
+          return ItemNote(
+            key: ValueKey(noteId),
+            noteId: noteId,
+            noteContent: document.data()
+          );
+        },
+      ),
+      floatingActionButtonLocation: ExpandableFab.location,
+      floatingActionButton: ExpandableFab(
+        key: _fabKey,
         children: [
-          Expanded(
-            child: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    Icons.card_travel,
-                    size: 48.0,
-                  ),
-                  SizedBox(height: 16.0),
-                  Text(
-                    'Sobre Nosotros',
-                    style: TextStyle(
-                      fontSize: 24.0,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                    ),
-                  ),
-                  SizedBox(height: 8.0),
-                  Text(
-                    'Somos una empresa dedicada a brindar soluciones innovadoras en tecnología. Nuestro equipo de expertos trabaja incansablemente para satisfacer las necesidades de nuestros clientes.',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 16.0, color: Color(0xFF8CCAB4)),
-                  ),
-                ],
-              ),
-            ),
+          FloatingActionButton.small(
+            heroTag: null,
+            tooltip: "Nueva nota",
+            child: Icon(Icons.file_copy),
+            onPressed: () {
+              print("Nueva nota button");
+              _fabKey.currentState?.toggle();
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => NewNote(),
+                ),
+              );
+            },
+          ),
+          FloatingActionButton.small(
+            heroTag: null,
+            tooltip: "Nueva carpeta",
+            child: Icon(Icons.folder),
+            onPressed: () {
+              _fabKey.currentState?.toggle();
+            },
           ),
         ],
       ),

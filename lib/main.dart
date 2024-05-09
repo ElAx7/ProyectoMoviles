@@ -1,8 +1,10 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:proyeto_moviles/bloc/auth_bloc.dart';
+import 'package:provider/provider.dart';
+import 'package:proyeto_moviles/providers/bloc/auth_bloc.dart';
 import 'package:proyeto_moviles/firebase_options.dart';
+import 'package:proyeto_moviles/providers/notes/notes_provider.dart';
 import 'package:proyeto_moviles/screens/auth/login_page.dart';
 import 'package:proyeto_moviles/screens/home/home_page.dart';
 
@@ -17,6 +19,7 @@ void main() async{
         BlocProvider(
           create: (context) => AuthBloc()..add(VerifyAuthEvent()),
         ),
+        ChangeNotifierProvider(create: (context) => NotesProvider()),
       ],
       child: MyApp(),
     )
