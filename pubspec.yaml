@@ -29,6 +29,13 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons:
+
+flutter_launcher_icons:
+  android: 'launcher_icon'
+  ios: false
+  image_path: 'assets/icon/image.png'
+  adaptive_icon_background: 'assets/icon/image.png'
 
 flutter:
   uses-material-design: true
